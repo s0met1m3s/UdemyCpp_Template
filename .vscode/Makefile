@@ -10,7 +10,7 @@ EXECUTABLE_NAME ?= main
 
 ifeq ($(COMPILATION_MODE), Debug)
 CPP_COMPILER_FLAGS = -g -std=$(CPP_STANDARD) # -fopenmp
-else ifeq ($(COMPILATION_MODE), Release)
+else
 CPP_COMPILER_FLAGS = -O3 -std=$(CPP_STANDARD) # -fopenmp
 endif
 
