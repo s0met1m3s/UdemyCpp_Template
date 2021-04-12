@@ -1,6 +1,5 @@
-
-{  
-    "version": "2.0.0", 
+{
+    "version": "2.0.0",
     "tasks": [
         // Cpp Helper Tasks
         {
@@ -11,10 +10,11 @@
                 "build",
                 "--file=${workspaceFolder}/.vscode/Makefile",
                 "--directory=${fileDirname}/",
-                "COMPILATION_MODE=Debug", 
+                "COMPILATION_MODE=Debug",
                 "CPP_COMPILER=${config:compilerCpp}",
+                "LANGUAGE_MODE=Cpp",
                 "EXECUTABLE_NAME=${fileBasenameNoExtension}Debug"
-            ],
+            ]
         },
         {
             "label": "Makefile_Release",
@@ -24,8 +24,9 @@
                 "build",
                 "--file=${workspaceFolder}/.vscode/Makefile",
                 "--directory=${fileDirname}/",
-                "COMPILATION_MODE=Release", 
+                "COMPILATION_MODE=Release",
                 "CPP_COMPILER=${config:compilerCpp}",
+                "LANGUAGE_MODE=Cpp",
                 "EXECUTABLE_NAME=${fileBasenameNoExtension}Release"
             ]
         },
@@ -39,17 +40,16 @@
                 "--file=${workspaceFolder}/.vscode/Makefile",
                 "--directory=${fileDirname}/",
                 "FILE_NAME=${file}",
-                "COMPILATION_MODE=Debug", 
+                "COMPILATION_MODE=Debug",
                 "CPP_COMPILER=${config:compilerCpp}",
+                "LANGUAGE_MODE=Cpp",
                 "EXECUTABLE_NAME=${fileBasenameNoExtension}Debug"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [
-                "$gcc"
-            ]
+            "problemMatcher": ["$gcc"]
         },
         {
             "label": "Cpp: Release (Single File)",
@@ -60,17 +60,16 @@
                 "--file=${workspaceFolder}/.vscode/Makefile",
                 "--directory=${fileDirname}/",
                 "FILE_NAME=${file}",
-                "COMPILATION_MODE=Release", 
+                "COMPILATION_MODE=Release",
                 "CPP_COMPILER=${config:compilerCpp}",
+                "LANGUAGE_MODE=Cpp",
                 "EXECUTABLE_NAME=${fileBasenameNoExtension}Release"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [
-                "$gcc"
-            ]
+            "problemMatcher": ["$gcc"]
         },
         // Folder Build Tasks
         {
@@ -80,18 +79,14 @@
             "args": [
                 "clean",
                 "--file=${workspaceFolder}/.vscode/Makefile",
-                "--directory=${fileDirname}/",
+                "--directory=${fileDirname}/"
             ],
-            "dependsOn": [
-                "Makefile_Debug"
-            ],
+            "dependsOn": ["Makefile_Debug"],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [
-                "$gcc"
-            ]
+            "problemMatcher": ["$gcc"]
         },
         {
             "label": "Cpp: Release (Folder)",
@@ -100,18 +95,14 @@
             "args": [
                 "clean",
                 "--file=${workspaceFolder}/.vscode/Makefile",
-                "--directory=${fileDirname}/",
+                "--directory=${fileDirname}/"
             ],
-            "dependsOn": [
-                "Makefile_Release"
-            ],
+            "dependsOn": ["Makefile_Release"],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [
-                "$gcc"
-            ]
+            "problemMatcher": ["$gcc"]
         },
         // Execution Tasks
         {
@@ -129,9 +120,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [
-                "$gcc"
-            ]
+            "problemMatcher": ["$gcc"]
         },
         {
             "label": "Execute: Release Program",
@@ -148,9 +137,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [
-                "$gcc"
-            ]
+            "problemMatcher": ["$gcc"]
         },
         // Util Tasks
         {
@@ -167,9 +154,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [
-                "$gcc"
-            ]
+            "problemMatcher": ["$gcc"]
         }
     ]
 }
