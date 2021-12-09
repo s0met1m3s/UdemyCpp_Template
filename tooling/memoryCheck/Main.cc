@@ -2,7 +2,7 @@
 
 int main()
 {
-    int length = 4;
+    unsigned int length = 4;
     int *arr = new int[length];
 
     for (unsigned int i = 0; i < length; i++)
@@ -11,5 +11,5 @@ int main()
         std::cout << arr[i] << std::endl;
     }
 
-    // delete[] arr;
+    delete[] arr;
 }
