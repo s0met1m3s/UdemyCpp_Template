@@ -22,7 +22,7 @@ auto my_function2(std::shared_ptr<U> shared_ptr)
  */
 int main()
 {
-    std::unique_ptr<int[]> ptr1 = std::make_unique<int[]>(3);
+    std::unique_ptr<int> ptr1 = std::make_unique<int>(3);
     ptr1[0] = 42;
     ptr1[1] = 62;
     ptr1[2] = 82;
