@@ -14,6 +14,3 @@ compile:
 
 build:
 	g++ $(FLAGS) Functions2.o -o Functions2
-
-print_exe:
-	objdump -CS Functions2
