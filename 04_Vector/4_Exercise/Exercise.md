@@ -13,7 +13,7 @@ Initialisiert eine 3x3 Matrix in der Main Funktion, mit den Wert (i + j) an dem 
 
 ### Beispiel Aufgabe 1
 
-![alt](../../media/Exercise1.png)
+![alt](./../../media/Exercise4_1.png)
 
 ## Aufgabe 2
 

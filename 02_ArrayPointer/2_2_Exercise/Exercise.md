@@ -36,7 +36,8 @@ die das letzte Element des dynamischen Arrays entfernt. Beachte dabei, dass sich
 ### Beispiel
 
 ```cpp
-int *my_data = new int[3];
+unsigned int size = 3;
+int *my_data = new int[size];
 my_data[0] = 0;
 my_data[1] = 1;
 my_data[2] = 2; 
