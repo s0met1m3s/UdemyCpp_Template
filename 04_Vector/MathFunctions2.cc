@@ -37,7 +37,7 @@ void log_double_vector(std::vector<double> &vec)
 
 int main()
 {
-    std::vector<double> my_vector(3, 0.0);
+    auto my_vector = std::vector<double>(3, 0.0);
 
     fill_double_vector(my_vector);
     print_double_vector(my_vector);
