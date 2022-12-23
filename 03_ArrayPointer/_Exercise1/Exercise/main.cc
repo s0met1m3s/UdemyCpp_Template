@@ -6,35 +6,40 @@
 int main()
 {
     // Exercise 1
-    const std::uint32_t array_length = 100;
-    double sum = 0.0;
+    auto array_length = std::size_t{100};
+    auto sum = 0.0;
 
-    double *p_array1 = nullptr;
-    p_array1 = new double[array_length];
+    auto *array1 = new double[array_length];
 
-    for (std::uint32_t i = 0; i < 100; i++)
+    for (std::size_t i = 0; i < array_length; i++)
     {
-        p_array1[i] = i;
+        array1[i] = i;
     }
 
-    sum = array_sum(p_array1, array_length);
+    sum = array_sum(array1, array_length);
     std::cout << "(Exercise 1) Array Sum = " << sum << std::endl;
+    delete[] array1;
+    array1 = nullptr;
 
     // Exercise 2
-    std::uint32_t input_array_length = 0;
-    int input_array_value = 0;
+    auto input_array_length = std::size_t{0};
+    auto input_array_value = std::int32_t{0};
 
     std::cout << std::endl << "Enter the array length: " << std::endl;
     std::cin >> input_array_length;
     std::cout << std::endl << "Enter the array value: " << std::endl;
     std::cin >> input_array_value;
+    std::cout << std::endl;
 
-    int *p_array2 = array_constructor(input_array_value, input_array_length);
+    auto *array2 = array_constructor(input_array_value, input_array_length);
 
-    for (std::uint32_t i = 0; i < input_array_length; i++)
+    for (std::size_t i = 0; i < input_array_length; i++)
     {
-        std::cout << p_array2[i] << std::endl;
+        std::cout << array2[i] << std::endl;
     }
+
+    delete[] array2;
+    array2 = nullptr;
 
     return 0;
 }
