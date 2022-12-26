@@ -3,9 +3,6 @@
 #include <atomic>
 #include <chrono>
 
-namespace cpptiming
-{
-
 using Clock = std::chrono::steady_clock;
 using nanosecs = std::chrono::nanoseconds;
 using microsecs = std::chrono::microseconds;
@@ -23,7 +20,7 @@ public:
     Rep elapsed_time() const
     {
         std::atomic_thread_fence(std::memory_order_relaxed);
-        const auto counted_time =
+        auto counted_time =
             std::chrono::duration_cast<Units>(Clock::now() - m_start_point)
                 .count();
         std::atomic_thread_fence(std::memory_order_relaxed);
@@ -38,5 +35,3 @@ public:
 private:
     std::chrono::time_point<Clock> m_start_point;
 };
-
-} // namespace cpptiming
