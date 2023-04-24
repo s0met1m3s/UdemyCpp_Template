@@ -2,7 +2,7 @@
 
 int main()
 {
-    int a = 12;
+    auto a = 12;
     auto b = static_cast<float>(a);
 
     auto c = 12.3;
