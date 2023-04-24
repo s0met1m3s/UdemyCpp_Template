@@ -49,11 +49,7 @@ BreakConstructorInitializersBeforeComma: false
 BreakConstructorInitializers: BeforeColon
 BreakAfterJavaFieldAnnotations: false
 BreakStringLiterals: true
-<<<<<<< HEAD
-ColumnLimit:     120
-=======
 ColumnLimit:     80
->>>>>>> 17b9f319b600b1cbd448a5e1c3e24bb331348183
 CommentPragmas:  '^ IWYU pragma:'
 CompactNamespaces: false
 ConstructorInitializerAllOnOneLineOrOnePerLine: false
